@@ -34,12 +34,12 @@ El detalle está en [`docs/arquitectura_c4_l2.md`](docs/arquitectura_c4_l2.md): 
 
 | Requisito | Implementación |
 |---|---|
-| Reemplazar base de conocimiento | [`data/kb/`](data/kb): 7 documentos de UFit (53 chunks), cargados con [`setup/ingest_kb.py`](setup/ingest_kb.py) |
-| Reemplazar data | [`backend/data/envios.json`](backend/data/envios.json) (paquetería) y [`setup/ufit_neon.sql`](setup/ufit_neon.sql) (catálogo, clientes y pedidos en Neon) |
-| Reemplazar Qdrant collection name | `QDRANT_COLLECTION_NAME=ufit_postventa_kb` |
+| Base de conocimiento | [`data/kb/`](data/kb): 7 documentos de UFit (53 chunks), cargados con [`setup/ingest_kb.py`](setup/ingest_kb.py) |
+| Data | [`backend/data/envios.json`](backend/data/envios.json) (paquetería) y [`setup/ufit_neon.sql`](setup/ufit_neon.sql) (catálogo, clientes y pedidos en Neon) |
+| Qdrant collection name | `QDRANT_COLLECTION_NAME=ufit_postventa_kb` |
 | MCP (opcional) | Neon MCP con allowlist de solo lectura: `run_sql`, `get_database_tables`, `describe_table_schema` |
 | Tracing | LangSmith, trace `chat_request` por consulta con spans de guardrails, LLM y tools, tokens, costo y `user_score` |
-| Reemplazar tools en service | [`backend/src/services/tools.py`](backend/src/services/tools.py) y [`skills.py`](backend/src/services/skills.py) |
+| Tools en service | [`backend/src/services/tools.py`](backend/src/services/tools.py) y [`skills.py`](backend/src/services/skills.py) |
 | Presentación con C4 nivel 2 | [`presentacion/UFit_Coach.pptx`](presentacion/UFit_Coach.pptx) |
 
 ### Qué cambió respecto a los labs
