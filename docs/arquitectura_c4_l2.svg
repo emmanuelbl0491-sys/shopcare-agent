@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="840" viewBox="0 0 1400 840">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#444444"/></marker></defs>
+<rect x="0" y="0" width="1400" height="840" fill="#FFFFFF"/>
+<rect x="0" y="0" width="1400" height="44" fill="#E8590C"/>
+<text x="24" y="29" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#FFFFFF" font-weight="bold" text-anchor="start"><tspan x="24" dy="0">UFit Coach — Diagrama de Contenedores (C4 Nivel 2)</tspan></text>
+<rect x="0" y="44" width="230" height="796" fill="#DCEAFB"/>
+<rect x="230" y="44" width="680" height="796" fill="#F3F3F3"/>
+<rect x="910" y="44" width="490" height="796" fill="#FDE8EA"/>
+<text x="14" y="68" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#555555" font-weight="normal" text-anchor="start"><tspan x="14" dy="0">Clientes</tspan></text>
+<text x="250" y="68" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#555555" font-weight="normal" text-anchor="start"><tspan x="250" dy="0">Sistema UFit Coach (local / Google Cloud Run)</tspan></text>
+<text x="930" y="68" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#555555" font-weight="normal" text-anchor="start"><tspan x="930" dy="0">Sistemas externos</tspan></text>
+<rect x="250" y="80" width="640" height="740" rx="8" fill="none" stroke="#888888" stroke-width="1.2" stroke-dasharray="8 5"/>
+<circle cx="115" cy="150" r="26" fill="#08427B"/>
+<rect x="25" y="180" width="180" height="96" rx="14" fill="#08427B"/>
+<text x="115" y="206" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#FFFFFF" font-weight="bold" text-anchor="middle"><tspan x="115" dy="0">Cliente UFit</tspan></text>
+<text x="115" y="225" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#DCE8F5" font-weight="normal" text-anchor="middle"><tspan x="115" dy="0">[Persona]</tspan></text>
+<text x="115" y="245" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#FFFFFF" font-weight="normal" text-anchor="middle"><tspan x="115" dy="0">Consulta pedidos,</tspan><tspan x="115" dy="15.600000000000001">devoluciones y tallas</tspan></text>
+<rect x="290" y="120" width="340" height="120" rx="10" fill="#1168BD" stroke="#0B4884" stroke-width="1"/>
+<text x="460" y="144" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#FFFFFF" font-weight="bold" text-anchor="middle"><tspan x="460" dy="0">Frontend Web</tspan></text>
+<text x="460" y="163" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#DCE8F5" font-weight="normal" text-anchor="middle"><tspan x="460" dy="0">[Container: Next.js 16 + React]</tspan></text>
+<text x="460" y="184" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#FFFFFF" font-weight="normal" text-anchor="middle"><tspan x="460" dy="0">Login, chat por sesiones,</tspan><tspan x="460" dy="15.600000000000001">historial y feedback 👍/👎</tspan></text>
+<rect x="290" y="330" width="360" height="270" rx="10" fill="#1168BD" stroke="#0B4884" stroke-width="1"/>
+<text x="470" y="354" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#FFFFFF" font-weight="bold" text-anchor="middle"><tspan x="470" dy="0">API Agente Coach</tspan></text>
+<text x="470" y="373" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#DCE8F5" font-weight="normal" text-anchor="middle"><tspan x="470" dy="0">[Container: Python · FastAPI · LangChain]</tspan></text>
+<text x="470" y="394" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#FFFFFF" font-weight="normal" text-anchor="middle"><tspan x="470" dy="0">1. Guardrails de entrada (8 capas)</tspan><tspan x="470" dy="16.900000000000002">2. Hooks pre/post agente y modelo</tspan><tspan x="470" dy="16.900000000000002">3. Agente create_agent + prompt v1</tspan><tspan x="470" dy="16.900000000000002">4. Tools: retrieve_documents,</tspan><tspan x="470" dy="16.900000000000002">    rastrear_pedido, calcular_reembolso</tspan><tspan x="470" dy="16.900000000000002">5. Skills: solicitud_devolucion,</tspan><tspan x="470" dy="16.900000000000002">    cambio_de_talla</tspan><tspan x="470" dy="16.900000000000002">6. Cliente MCP (allowlist lectura)</tspan><tspan x="470" dy="16.900000000000002">7. Callbacks de tracing (LangSmith)</tspan></text>
+<path d="M290 702 a180 12 0 0 0 360 0 v86 a180 12 0 0 1 -360 0 z" fill="#1168BD" stroke="#0B4884"/>
+<ellipse cx="470" cy="702" rx="180" ry="12" fill="#2B7FD1" stroke="#0B4884"/>
+<text x="470" y="736" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#FFFFFF" font-weight="bold" text-anchor="middle"><tspan x="470" dy="0">BD History &amp; Feedback</tspan></text>
+<text x="470" y="754" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#DCE8F5" font-weight="normal" text-anchor="middle"><tspan x="470" dy="0">[Container: PostgreSQL · tabla history]</tspan></text>
+<text x="470" y="774" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#FFFFFF" font-weight="normal" text-anchor="middle"><tspan x="470" dy="0">Q/A, tokens, contextos, trace_id, is_ok</tspan></text>
+<rect x="940" y="90" width="430" height="84" rx="10" fill="#6B6B6B" stroke="#4A4A4A"/>
+<text x="1155" y="114" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#FFFFFF" font-weight="bold" text-anchor="middle"><tspan x="1155" dy="0">Firebase Authentication</tspan></text>
+<text x="1155" y="133" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#E6E6E6" font-weight="normal" text-anchor="middle"><tspan x="1155" dy="0">[Sistema externo · Google]</tspan></text>
+<text x="1155" y="153" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#FFFFFF" font-weight="normal" text-anchor="middle"><tspan x="1155" dy="0">Identidad del cliente (email/password)</tspan></text>
+<rect x="940" y="194" width="430" height="84" rx="10" fill="#6B6B6B" stroke="#4A4A4A"/>
+<text x="1155" y="218" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#FFFFFF" font-weight="bold" text-anchor="middle"><tspan x="1155" dy="0">OpenAI API</tspan></text>
+<text x="1155" y="237" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#E6E6E6" font-weight="normal" text-anchor="middle"><tspan x="1155" dy="0">[Sistema externo · LLM]</tspan></text>
+<text x="1155" y="257" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#FFFFFF" font-weight="normal" text-anchor="middle"><tspan x="1155" dy="0">gpt-4o-mini + text-embedding-3-small</tspan></text>
+<rect x="940" y="298" width="430" height="84" rx="10" fill="#6B6B6B" stroke="#4A4A4A"/>
+<text x="1155" y="322" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#FFFFFF" font-weight="bold" text-anchor="middle"><tspan x="1155" dy="0">Qdrant Cloud</tspan></text>
+<text x="1155" y="341" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#E6E6E6" font-weight="normal" text-anchor="middle"><tspan x="1155" dy="0">[Sistema externo · Vector DB]</tspan></text>
+<text x="1155" y="361" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#FFFFFF" font-weight="normal" text-anchor="middle"><tspan x="1155" dy="0">Colección ufit_postventa_kb (políticas)</tspan></text>
+<rect x="940" y="402" width="430" height="84" rx="10" fill="#6B6B6B" stroke="#4A4A4A"/>
+<text x="1155" y="426" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#FFFFFF" font-weight="bold" text-anchor="middle"><tspan x="1155" dy="0">Groq</tspan></text>
+<text x="1155" y="445" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#E6E6E6" font-weight="normal" text-anchor="middle"><tspan x="1155" dy="0">[Sistema externo · Guardrails LLM]</tspan></text>
+<text x="1155" y="465" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#FFFFFF" font-weight="normal" text-anchor="middle"><tspan x="1155" dy="0">Prompt Guard 2 + gpt-oss-safeguard</tspan></text>
+<rect x="940" y="506" width="430" height="84" rx="10" fill="#6B6B6B" stroke="#4A4A4A"/>
+<text x="1155" y="530" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#FFFFFF" font-weight="bold" text-anchor="middle"><tspan x="1155" dy="0">Neon Postgres (MCP)</tspan></text>
+<text x="1155" y="549" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#E6E6E6" font-weight="normal" text-anchor="middle"><tspan x="1155" dy="0">[Sistema externo · BD comercial]</tspan></text>
+<text x="1155" y="569" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#FFFFFF" font-weight="normal" text-anchor="middle"><tspan x="1155" dy="0">ufit_productos, ufit_pedidos, clientes</tspan></text>
+<rect x="940" y="610" width="430" height="84" rx="10" fill="#6B6B6B" stroke="#4A4A4A"/>
+<text x="1155" y="634" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#FFFFFF" font-weight="bold" text-anchor="middle"><tspan x="1155" dy="0">API Paquetería</tspan></text>
+<text x="1155" y="653" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#E6E6E6" font-weight="normal" text-anchor="middle"><tspan x="1155" dy="0">[Sistema externo · mock envios.json]</tspan></text>
+<text x="1155" y="673" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#FFFFFF" font-weight="normal" text-anchor="middle"><tspan x="1155" dy="0">Estafeta / FedEx / DHL: estado de guías</tspan></text>
+<rect x="940" y="714" width="430" height="84" rx="10" fill="#6B6B6B" stroke="#4A4A4A"/>
+<text x="1155" y="738" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#FFFFFF" font-weight="bold" text-anchor="middle"><tspan x="1155" dy="0">LangSmith</tspan></text>
+<text x="1155" y="757" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#E6E6E6" font-weight="normal" text-anchor="middle"><tspan x="1155" dy="0">[Sistema externo · Observabilidad]</tspan></text>
+<text x="1155" y="777" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#FFFFFF" font-weight="normal" text-anchor="middle"><tspan x="1155" dy="0">Traces, tokens, costo, feedback, evals</tspan></text>
+<line x1="205" y1="228" x2="290" y2="200" stroke="#444444" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#arr)"/>
+<rect x="217.9" y="235" width="58.199999999999996" height="36" rx="4" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="247" y="248" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#222222" font-weight="normal" text-anchor="middle"><tspan x="247" dy="0">Usa</tspan><tspan x="247" dy="15">(HTTPS)</tspan></text>
+<line x1="630" y1="150" x2="940" y2="132" stroke="#444444" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#arr)"/>
+<rect x="686.6" y="107" width="196.79999999999998" height="21" rx="4" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="785" y="120" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#222222" font-weight="normal" text-anchor="middle"><tspan x="785" dy="0">Inicia sesión (Firebase SDK)</tspan></text>
+<line x1="470" y1="240" x2="470" y2="330" stroke="#444444" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#arr)"/>
+<rect x="476" y="265" width="210" height="36" rx="4" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="482" y="278" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#222222" font-weight="normal" text-anchor="start"><tspan x="482" dy="0">POST /api/chat · /api/feedback</tspan><tspan x="482" dy="15">GET /api/history (JSON/HTTPS)</tspan></text>
+<polyline points="650,370 870,370 870,236 940,236" fill="none" stroke="#444444" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#arr)"/>
+<rect x="656" y="348" width="170.39999999999998" height="19" rx="4" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="662" y="362" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#222222" font-weight="normal" text-anchor="start"><tspan x="662" dy="0">LLM + embeddings (HTTPS)</tspan></text>
+<polyline points="650,410 890,410 890,340 940,340" fill="none" stroke="#444444" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#arr)"/>
+<rect x="656" y="388" width="163.79999999999998" height="19" rx="4" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="662" y="402" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#222222" font-weight="normal" text-anchor="start"><tspan x="662" dy="0">similarity_search (k=4)</tspan></text>
+<polyline points="650,450 905,450 905,444 940,444" fill="none" stroke="#444444" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#arr)"/>
+<rect x="656" y="428" width="190.2" height="19" rx="4" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="662" y="442" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#222222" font-weight="normal" text-anchor="start"><tspan x="662" dy="0">Clasifica input (capas 7-8)</tspan></text>
+<polyline points="650,490 920,490 920,548 940,548" fill="none" stroke="#444444" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#arr)"/>
+<rect x="656" y="468" width="203.39999999999998" height="19" rx="4" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="662" y="482" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#222222" font-weight="normal" text-anchor="start"><tspan x="662" dy="0">MCP streamable HTTP · run_sql</tspan></text>
+<polyline points="650,530 895,530 895,652 940,652" fill="none" stroke="#444444" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#arr)"/>
+<rect x="656" y="508" width="157.2" height="19" rx="4" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="662" y="522" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#222222" font-weight="normal" text-anchor="start"><tspan x="662" dy="0">rastrear_pedido (mock)</tspan></text>
+<polyline points="650,570 870,570 870,756 940,756" fill="none" stroke="#444444" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#arr)"/>
+<rect x="656" y="548" width="137.39999999999998" height="19" rx="4" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="662" y="562" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#222222" font-weight="normal" text-anchor="start"><tspan x="662" dy="0">Traces + user_score</tspan></text>
+<line x1="470" y1="600" x2="470" y2="690" stroke="#444444" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#arr)"/>
+<rect x="476" y="623" width="163.79999999999998" height="36" rx="4" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="482" y="636" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#222222" font-weight="normal" text-anchor="start"><tspan x="482" dy="0">Lee/escribe historial</tspan><tspan x="482" dy="15">y feedback (SQLAlchemy)</tspan></text>
+</svg>
